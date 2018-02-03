@@ -5,10 +5,13 @@ public class Airplane {
 	public Airplane() { //default constructor
 		for (int r = 10; r < plane.length; r++)	{
 			for (int c = 4; c < plane[0].length; c++) {
-				plane[r][c].taken = false;
+				Ticket t = new Ticket(0, "", "");
+				plane[r][c].set(false, t);
+				//Trying to access private fields
+				/*plane[r][c].taken = false;
 				plane[r][c].ticket.price = 0;
 				plane[r][c].ticket.passName = "";
-				plane[r][c].ticket.seatNum = "";
+				plane[r][c].ticket.seatNum = "";*/
 			}
 		}
 	}
@@ -20,10 +23,11 @@ public class Airplane {
 	public Airplane(Airplane plane2) {
 		for (int r = 10; r < plane.length; r++)	{
 			for (int c = 4; c < plane[0].length; c++) {
-				plane[r][c].taken = plane2[r][c].taken;
+				//Trying to access private fields from the Seat class
+				/*plane[r][c].taken = plane2[r][c].taken;
 				plane[r][c].ticket.price = plane2[r][c].ticket.price;
 				plane[r][c].ticket.passName = plane2[r][c].ticket.passName;
-				plane[r][c].ticket.seatNum = plane2[r][c].ticket.seatNum;
+				plane[r][c].ticket.seatNum = plane2[r][c].ticket.seatNum;*/
 			}
 		}
 	}
@@ -35,10 +39,11 @@ public class Airplane {
 	public void set(Airplane plane2) {
 		for (int r = 10; r < plane.length; r++)	{
 			for (int c = 4; c < plane[0].length; c++) {
-				plane[r][c].taken = plane2[r][c].taken;
+				/*plane[r][c].taken = plane2[r][c].taken;
 				plane[r][c].ticket.price = plane2[r][c].ticket.price;
 				plane[r][c].ticket.passName = plane2[r][c].ticket.passName;
 				plane[r][c].ticket.seatNum = plane2[r][c].ticket.seatNum;
+				*/
 			}
 		}
 	}
@@ -56,5 +61,11 @@ public class Airplane {
 			}
 		}
 		return str;
+	}
+	
+	//Need to add these methods to access the thing
+	public Seat[][] getPlane() {
+		Seat[][] p = plane;
+		return p;
 	}
 }
