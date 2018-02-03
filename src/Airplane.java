@@ -1,12 +1,12 @@
 
 public class Airplane {
-	
-	private Seat[][] plane = new Seat[10][4]; //assume all seats are taken
-	
+
+	private final int ROW = 10, COL = 4; //number of rows 10, number of columns is 4
+	private Seat[][] plane = new Seat[ROW][COL]; //assume all seats are taken
+
 	public Airplane() { //default constructor
-		//Set indexes to 0 and plane[0].length to plane[r].length
 		for (int r = 0; r < plane.length; r++)	{
-			for (int c = 0; c < plane[r].length; c++) {
+			for (int c = 0; c < plane[0].length; c++) {
 				Ticket t = new Ticket(0, "", "");
 				plane[r][c].set(false, t);
 				//Trying to access private fields
@@ -23,8 +23,8 @@ public class Airplane {
 	 * @param plane2 The Airplane object to copy
 	 */
 	public Airplane(Airplane plane2) {
-		for (int r = 10; r < plane.length; r++)	{
-			for (int c = 4; c < plane[0].length; c++) {
+		for (int r = 0; r < plane.length; r++)	{
+			for (int c = 0; c < plane[0].length; c++) {
 				//Trying to access private fields from the Seat class
 				/*plane[r][c].taken = plane2[r][c].taken;
 				plane[r][c].ticket.price = plane2[r][c].ticket.price;
@@ -39,8 +39,8 @@ public class Airplane {
 	 * @param plane2 is the Airplane object to copy 
 	 */
 	public void set(Airplane plane2) {
-		for (int r = 10; r < plane.length; r++)	{
-			for (int c = 4; c < plane[0].length; c++) {
+		for (int r = 0; r < plane.length; r++)	{
+			for (int c = 0; c < plane[0].length; c++) {
 				/*plane[r][c].taken = plane2[r][c].taken;
 				plane[r][c].ticket.price = plane2[r][c].ticket.price;
 				plane[r][c].ticket.passName = plane2[r][c].ticket.passName;
