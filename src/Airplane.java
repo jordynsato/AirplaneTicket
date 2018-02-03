@@ -1,3 +1,4 @@
+
 public class Airplane {
 	
 	private Seat[][] plane = new Seat[10][4]; //assume all seats are taken

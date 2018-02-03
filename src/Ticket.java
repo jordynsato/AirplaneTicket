@@ -17,13 +17,6 @@ public class Ticket {
 		this.seatNum = seatNum; 
 	}
 
-	//Create a copy constructor for easy use
-	public Ticket(Ticket t) {
-		this.price = t.price;
-		this.passName = t.passName;
-		this.seatNum = t.seatNum;
-	}
-	
 	/**
 	 * The set method sets a value for each of the fields.
 	 * @param price The price of the ticket.
@@ -36,7 +29,32 @@ public class Ticket {
 		this.seatNum = seatNum; 
 	}
 
+	public double getPrice() {
+		return price;
+	}
 
+	public void setPrice(double num) {
+		price = num;
+	}
+	
+	public String getPassName() {
+		return passName;
+	}
+	
+
+	public void setPassName(String pass) {
+		this.passName = pass;
+	}
+	
+	public String getSeatNum() {
+		return seatNum;
+	}
+	
+	public void setSeatNum(String seatName) {
+		this.seatNum = seatName;
+	}
+	
+	
 	/**
 	 * toString method which provides this object as a string.
 	 * @return String containing the ticket information.
