@@ -67,9 +67,9 @@ public class Ticket {
 	 * @return String containing the ticket information.
 	 */
 	public String toString() {
-		String str = "Passenger: " + passName +
-				"\nSeat No.: " + seatNum +
-				"\nPrice: " + price;
+		String str = "\tPassenger: " + passName +
+				"\n\tSeat No.: " + seatNum +
+				"\n\tPrice: " + price + "\n";
 		return str;
 	}
 }
