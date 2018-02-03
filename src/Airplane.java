@@ -2,10 +2,11 @@
 public class Airplane {
 	
 	private Seat[][] plane = new Seat[10][4]; //assume all seats are taken
-
+	
 	public Airplane() { //default constructor
-		for (int r = 10; r < plane.length; r++)	{
-			for (int c = 4; c < plane[0].length; c++) {
+		//Set indexes to 0 and plane[0].length to plane[r].length
+		for (int r = 0; r < plane.length; r++)	{
+			for (int c = 0; c < plane[r].length; c++) {
 				Ticket t = new Ticket(0, "", "");
 				plane[r][c].set(false, t);
 				//Trying to access private fields
