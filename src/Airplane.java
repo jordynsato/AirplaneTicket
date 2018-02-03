@@ -1,5 +1,6 @@
 
 public class Airplane {
+
 	private final int ROW = 10, COL = 4; //number of rows 10, number of columns is 4
 	private Seat[][] plane = new Seat[ROW][COL]; //assume all seats are taken
 
@@ -7,7 +8,8 @@ public class Airplane {
 		for (int r = 0; r < plane.length; r++)	{
 			for (int c = 0; c < plane[0].length; c++) {
 				Ticket t = new Ticket(0, "", "");
-				plane[r][c].set(false, t);
+				Seat s = new Seat(false, t);
+				plane[r][c] = s;
 				//Trying to access private fields
 				/*plane[r][c].taken = false;
 				plane[r][c].ticket.price = 0;
