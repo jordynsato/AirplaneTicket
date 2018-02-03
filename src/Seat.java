@@ -43,4 +43,15 @@ public class Seat {
 		String str = "Seat Taken: " + taken + "\n" + ticket.toString();
 		return str;
 	}
+	
+	//Need to create the following methods to get the fields
+	public boolean getTaken() {
+		boolean t = taken;
+		return t;
+	}
+	
+	public Ticket getTicket() {
+		Ticket t = new Ticket(ticket);
+		return t;
+	}
 }
