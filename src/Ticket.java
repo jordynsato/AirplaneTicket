@@ -17,6 +17,13 @@ public class Ticket {
 		this.seatNum = seatNum; 
 	}
 
+	//Adding a copy constructor
+	public Ticket(Ticket t) {
+		this.price = t.price;
+		this.passName = t.passName;
+		this.seatNum = t.seatNum;
+	}
+	
 	/**
 	 * The set method sets a value for each of the fields.
 	 * @param price The price of the ticket.

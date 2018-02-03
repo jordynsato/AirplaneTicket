@@ -56,8 +56,9 @@ public class Airplane {
 	public String toString() { //needs to be fixed
 		//Need to have them initialize str
 		String str = "";
-		for (int r = 10; r < plane.length; r++)	{
-			for (int c = 4; c < plane[0].length; c++) {
+		//Changed r from 10 to 0 and c from 4 to 0
+		for (int r = 0; r < plane.length; r++)	{
+			for (int c = 0; c < plane[0].length; c++) {
 				str += plane[r][c].toString();
 			}
 		}
@@ -66,6 +67,7 @@ public class Airplane {
 	
 	//Need to add these methods to access the thing
 	public Seat[][] getPlane() {
+		//Seat[][] p = new Seat[plane.length][plane[0].length];
 		Seat[][] p = plane;
 		return p;
 	}
