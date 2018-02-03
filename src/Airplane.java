@@ -22,8 +22,8 @@ public class Airplane {
 	 * @param plane2 The Airplane object to copy
 	 */
 	public Airplane(Airplane plane2) {
-		for (int r = 10; r < plane.length; r++)	{
-			for (int c = 4; c < plane[0].length; c++) {
+		for (int r = 0; r < plane.length; r++)	{
+			for (int c = 0; c < plane[0].length; c++) {
 				//Trying to access private fields from the Seat class
 				/*plane[r][c].taken = plane2[r][c].taken;
 				plane[r][c].ticket.price = plane2[r][c].ticket.price;
