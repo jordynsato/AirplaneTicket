@@ -5,9 +5,9 @@ public class AirplaneDemo {
 		// for testing purposes, setting every seat to these values
 		Airplane planeTest = new Airplane();
 
-		//Add .getPlane() method
-		for (int r = 10; r < planeTest.getPlane().length; r++) {
-			for (int c = 4; c < planeTest.getPlane()[0].length; c++) {
+		//Add .getPlane() method, set indexes to 0
+		for (int r = 0; r < planeTest.getPlane().length; r++) {
+			for (int c = 0; c < planeTest.getPlane()[0].length; c++) {
 				planeTest.getPlane()[r][c].set(seat.getTaken(), ticket);
 				/*planeTest[r][c].taken = seat.taken;
 				planeTest[r][c].ticket.price = ticket.price;
